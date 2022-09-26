@@ -18,6 +18,10 @@ compileJava {
     options.release = 17
 }
 
+run {
+    standardInput = System.in
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
