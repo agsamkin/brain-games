@@ -9,4 +9,8 @@
 
 ### Even game demo:
 
-[![asciicast](https://asciinema.org/a/524406.svg)](https://asciinema.org/a/524406)
+[![asciicast](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo.svg)](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo)
+
+### Even calc demo:
+
+[![asciicast](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG.svg)](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG)
