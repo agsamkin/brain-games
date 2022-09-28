@@ -1,23 +1,28 @@
 package hexlet.code;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.Game;
 
-import java.nio.charset.Charset;
-import java.util.InputMismatchException;
-import java.util.Random;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
         showStartMenu();
-        startNumberGame(getNumberGame());
+        Optional<Game> opt = getGame(getNumberGame());
+        if (opt.isPresent()) {
+            Engine engine = new Engine(opt.get());
+            engine.start();
+        }
     }
 
     private static void showStartMenu() {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
     }
 
@@ -34,7 +39,7 @@ public class App {
         return number;
     }
 
-    private static void startNumberGame(int number) {
+    private static Optional<Game> getGame(int number) {
         switch (number) {
             case 0:
                 break;
@@ -42,10 +47,11 @@ public class App {
                 Cli.greeting();
                 break;
             case 2:
-                Cli.greeting();
-                EvenGame.start();
-                break;
+                return Optional.of(new EvenGame());
+            case 3:
+                return Optional.of(new CalcGame());
         }
+        return Optional.empty();
     }
 
 }

@@ -1,32 +1,16 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.Random;
 import java.util.Scanner;
 
-public class EvenGame {
-
-    public static void start() {
-
-        System.out.println("Answer 'yes' if number even otherwise answer 'no'.  ");
-
-        int countOfCorrectAnswers = 0;
-
-        while (countOfCorrectAnswers < 3) {
-            if (isCorrectAnswer()) {
-                countOfCorrectAnswers++;
-            } else {
-                break;
-            }
-        }
-
-        if (countOfCorrectAnswers == 3) {
-            System.out.println("Congratulations, " + Cli.getUsername() + "!");
-        }
+public class EvenGame implements Game {
+    @Override
+    public void hello() {
+        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
     }
 
-    private static boolean isCorrectAnswer() {
+    @Override
+    public boolean play() {
         Random random = new Random();
         int number = random.nextInt(100);
         String correctAnswer = number % 2 == 0 ? "yes" : "no";
@@ -34,7 +18,7 @@ public class EvenGame {
         System.out.println("Question: " + number);
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Your answer: " );
+        System.out.print("Your answer: ");
         String answer = sc.next();
 
         if (answer.equals(correctAnswer)) {
@@ -47,5 +31,4 @@ public class EvenGame {
             return false;
         }
     }
-
 }
