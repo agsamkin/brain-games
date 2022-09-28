@@ -11,6 +11,6 @@
 
 [![asciicast](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo.svg)](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo)
 
-### Even calc demo:
+### Сalc game demo:
 
 [![asciicast](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG.svg)](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG)
