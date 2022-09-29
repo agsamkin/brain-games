@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
 import hexlet.code.games.Game;
 
 import java.util.Optional;
@@ -23,6 +24,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
     }
 
@@ -50,6 +52,8 @@ public class App {
                 return Optional.of(new EvenGame());
             case 3:
                 return Optional.of(new CalcGame());
+            case 4:
+                return Optional.of(new GCDGame());
         }
         return Optional.empty();
     }

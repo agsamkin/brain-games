@@ -14,3 +14,7 @@
 ### Сalc game demo:
 
 [![asciicast](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG.svg)](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG)
+
+### GCD game demo:
+
+[![asciicast](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli.svg)](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli)
