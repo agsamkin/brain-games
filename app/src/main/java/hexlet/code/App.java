@@ -1,61 +1,48 @@
 package hexlet.code;
 
-import hexlet.code.games.CalcGame;
-import hexlet.code.games.EvenGame;
-import hexlet.code.games.GCDGame;
 import hexlet.code.games.Game;
+import hexlet.code.games.GameMenu;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class App {
+public final class App {
 
     public static void main(String[] args) {
         showStartMenu();
-        Optional<Game> opt = getGame(getNumberGame());
-        if (opt.isPresent()) {
-            Engine engine = new Engine(opt.get());
-            engine.start();
+        int menuItem = getMenuItem();
+        if (menuItem == 0) {
+            return;
+        } else if (menuItem == 1) {
+            Cli.greeting();
+        } else {
+            Optional<Game> result = GameMenu.getGameByNumber(menuItem);
+            if (result.isPresent()) {
+                Engine engine = new Engine(result.get());
+                engine.start();
+            }
         }
     }
 
     private static void showStartMenu() {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("0 - Exit");
+        Arrays.stream(GameMenu.values())
+                .sorted(Comparator.comparingInt(GameMenu::getMenuItem))
+                .forEach(gameMenu -> System.out.println(gameMenu.getMenuItemDescription()));
     }
 
-    private static int getNumberGame() {
-        int number = 0;
+    private static int getMenuItem() {
+        int menuItem = 0;
         Scanner sc = new Scanner(System.in);
         System.out.print("Your choice: ");
         try {
-            number = sc.nextInt();
+            menuItem = sc.nextInt();
         } catch (Exception e) {
             System.out.println("Incorrect value, try again");
         }
         System.out.print("\n");
-        return number;
+        return menuItem;
     }
-
-    private static Optional<Game> getGame(int number) {
-        switch (number) {
-            case 0:
-                break;
-            case 1:
-                Cli.greeting();
-                break;
-            case 2:
-                return Optional.of(new EvenGame());
-            case 3:
-                return Optional.of(new CalcGame());
-            case 4:
-                return Optional.of(new GCDGame());
-        }
-        return Optional.empty();
-    }
-
 }

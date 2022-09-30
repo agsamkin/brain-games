@@ -2,22 +2,21 @@ package hexlet.code;
 
 import hexlet.code.games.Game;
 
-public class Engine {
-
+public final class Engine {
     private final Game game;
+    private final int numberOfCorrectAnswersToWin = 3;
 
     public Engine(Game game) {
         this.game = game;
     }
 
     public void start() {
-
         Cli.greeting();
 
         game.hello();
 
         int countOfCorrectAnswers = 0;
-        while (countOfCorrectAnswers < 3) {
+        while (countOfCorrectAnswers < numberOfCorrectAnswersToWin) {
             if (game.play()) {
                 countOfCorrectAnswers++;
             } else {
@@ -26,9 +25,8 @@ public class Engine {
             }
         }
 
-        if (countOfCorrectAnswers == 3) {
+        if (countOfCorrectAnswers == numberOfCorrectAnswersToWin) {
             System.out.println("Congratulations, " + Cli.getUsername() + "!");
         }
     }
-
 }

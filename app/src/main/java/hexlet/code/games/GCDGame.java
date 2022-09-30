@@ -3,7 +3,10 @@ package hexlet.code.games;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GCDGame implements Game {
+public final class GCDGame implements Game {
+    private final int maxA = 10;
+    private final int maxB = 10;
+
     @Override
     public void hello() {
         System.out.println("Find the greatest common divisor of given numbers.");
@@ -12,8 +15,8 @@ public class GCDGame implements Game {
     @Override
     public boolean play() {
         Random random = new Random();
-        int a = random.nextInt(10);
-        int b = random.nextInt(10);
+        int a = random.nextInt(maxA);
+        int b = random.nextInt(maxB);
 
         int correctAnswer = gcd(a, b);
 
