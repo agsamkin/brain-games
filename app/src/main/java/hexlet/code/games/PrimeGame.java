@@ -36,7 +36,6 @@ public final class PrimeGame implements Game {
         return true;
     }
 
-
     private enum PrimeNumber {
         FIRST(2),
         SECOND(3);
