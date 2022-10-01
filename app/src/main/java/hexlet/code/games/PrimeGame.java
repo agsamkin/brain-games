@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import java.util.Random;
 
-public class PrimeGame implements Game {
-    private final int maxNumber = 101;
+public final class PrimeGame implements Game {
+    private final int maxNumber = 100;
 
     @Override
     public void hello() {
@@ -13,7 +13,7 @@ public class PrimeGame implements Game {
     @Override
     public boolean play() {
         Random random = new Random();
-        int number = random.nextInt(101);
+        int number = random.nextInt(maxNumber);
         String correctAnswer = isPrime(number) ? "yes" : "no";
 
         System.out.println("Question: " + number);

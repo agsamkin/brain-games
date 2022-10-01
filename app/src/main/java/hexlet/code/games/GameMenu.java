@@ -5,13 +5,13 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public enum GameMenu {
-    EXIT(0, "0 - Exit", Optional.empty()),
     GREET(1, "1 - Greet", Optional.empty()),
     EVEN(2, "2 - Even", Optional.of(EvenGame::new)),
     CALC(3, "3 - Calc", Optional.of(CalcGame::new)),
     GCD(4, "4 - GCD", Optional.of(GCDGame::new)),
     PROGRESSION(5, "5 - Progression", Optional.of(ProgressionGame::new)),
-    PRIME(6, "6 - Prime", Optional.of(PrimeGame::new));
+    PRIME(6, "6 - Prime", Optional.of(PrimeGame::new)),
+    EXIT(0, "0 - Exit", Optional.empty());
 
     private final int menuItem;
     private final String menuItemDescription;

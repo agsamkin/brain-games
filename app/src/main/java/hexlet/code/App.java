@@ -4,7 +4,6 @@ import hexlet.code.games.Game;
 import hexlet.code.games.GameMenu;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Optional;
 import java.util.Scanner;
 
@@ -13,9 +12,7 @@ public final class App {
     public static void main(String[] args) {
         showStartMenu();
         int menuItem = getMenuItem();
-        if (menuItem == 0) {
-            return;
-        } else if (menuItem == 1) {
+        if (menuItem == 1) {
             Cli.greeting();
         } else {
             Optional<Game> result = GameMenu.getGameByNumber(menuItem);
@@ -29,7 +26,6 @@ public final class App {
     private static void showStartMenu() {
         System.out.println("Please enter the game number and press Enter.");
         Arrays.stream(GameMenu.values())
-                .sorted(Comparator.comparingInt(GameMenu::getMenuItem))
                 .forEach(gameMenu -> System.out.println(gameMenu.getMenuItemDescription()));
     }
 

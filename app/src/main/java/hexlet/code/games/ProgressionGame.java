@@ -10,7 +10,7 @@ public final class ProgressionGame implements Game {
     private final int maxDeltaValue = 4;
 
     private final int minValueStartElement = 0;
-    private final int maxValueStartElement = 21;
+    private final int maxValueStartElement = 20;
 
     @Override
     public void hello() {
