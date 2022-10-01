@@ -5,9 +5,6 @@ import java.util.Random;
 public final class PrimeGame implements Game {
     private final int maxNumber = 100;
 
-    private int firstPrimeNumber = 2;
-    private int secondPrimeNumber = 3;
-
     @Override
     public void hello() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -25,6 +22,9 @@ public final class PrimeGame implements Game {
     }
 
     private boolean isPrime(int number) {
+        int firstPrimeNumber = 2;
+        int secondPrimeNumber = 3;
+
         if (number < firstPrimeNumber) {
             return false;
         } else if (number <= secondPrimeNumber) {
