@@ -47,7 +47,8 @@ public final class CalcGame implements Game {
         private final String operationDescription;
         private final BiFunction<Integer, Integer, Integer> operation;
 
-        Operation(int newOperationNumber, String newOperationDescription, BiFunction<Integer, Integer, Integer> newOperation) {
+        Operation(int newOperationNumber, String newOperationDescription,
+                  BiFunction<Integer, Integer, Integer> newOperation) {
             this.operationNumber = newOperationNumber;
             this.operationDescription = newOperationDescription;
             this.operation = newOperation;
