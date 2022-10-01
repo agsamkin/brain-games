@@ -6,8 +6,8 @@ public final class Engine {
     private final Game game;
     private final int numberOfCorrectAnswersToWin = 3;
 
-    public Engine(Game game) {
-        this.game = game;
+    public Engine(Game newGame) {
+        this.game = newGame;
     }
 
     public void start() {

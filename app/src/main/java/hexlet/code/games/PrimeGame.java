@@ -22,9 +22,11 @@ public final class PrimeGame implements Game {
     }
 
     private boolean isPrime(int number) {
-        if (number < 2) {
+        int firstPrimeNumber = 2;
+        int secondPrimeNumber = 3;
+        if (number < firstPrimeNumber) {
             return false;
-        } else if (number <= 3) {
+        } else if (number <= secondPrimeNumber) {
             return true;
         } else {
             for (int i = 2; i <= number / 2; i++) {

@@ -17,10 +17,10 @@ public enum GameMenu {
     private final String menuItemDescription;
     private final Optional<Supplier<Game>> game;
 
-    GameMenu(int menuItem, String menuItemDescription, Optional<Supplier<Game>> game) {
-        this.menuItem = menuItem;
-        this.menuItemDescription = menuItemDescription;
-        this.game = game;
+    GameMenu(int newMenuItem, String newMenuItemDescription, Optional<Supplier<Game>> newGame) {
+        this.menuItem = newMenuItem;
+        this.menuItemDescription = newMenuItemDescription;
+        this.game = newGame;
     }
 
     public int getMenuItem() {
