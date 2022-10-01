@@ -22,12 +22,9 @@ public final class PrimeGame implements Game {
     }
 
     private boolean isPrime(int number) {
-        int firstPrimeNumber = 2;
-        int secondPrimeNumber = 3;
-
-        if (number < firstPrimeNumber) {
+        if (number < PrimeNumber.FIRST.primeNumber) {
             return false;
-        } else if (number <= secondPrimeNumber) {
+        } else if (number <= PrimeNumber.SECOND.primeNumber) {
             return true;
         } else {
             for (int i = 2; i <= number / 2; i++) {
@@ -38,4 +35,17 @@ public final class PrimeGame implements Game {
         }
         return true;
     }
+
+
+    private enum PrimeNumber {
+        FIRST(2),
+        SECOND(3);
+
+        private final int primeNumber;
+
+        PrimeNumber(int newPrimeNumber) {
+            this.primeNumber = newPrimeNumber;
+        }
+    }
+
 }
