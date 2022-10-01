@@ -10,7 +10,8 @@ public enum GameMenu {
     EVEN(2, "2 - Even", Optional.of(EvenGame::new)),
     CALC(3, "3 - Calc", Optional.of(CalcGame::new)),
     GCD(4, "4 - GCD", Optional.of(GCDGame::new)),
-    PROGRESSION(5, "5 - Progression", Optional.of(Progression::new));
+    PROGRESSION(5, "5 - Progression", Optional.of(ProgressionGame::new)),
+    PRIME(6, "6 - Prime", Optional.of(PrimeGame::new));
 
     private final int menuItem;
     private final String menuItemDescription;
