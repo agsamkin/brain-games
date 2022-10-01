@@ -3,7 +3,6 @@ package hexlet.code.games;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Random;
-import java.util.Scanner;
 import java.util.function.BiFunction;
 
 public final class CalcGame implements Game {
@@ -19,6 +18,7 @@ public final class CalcGame implements Game {
     @Override
     public boolean play() {
         Random random = new Random();
+
         int a = random.nextInt(maxA);
         int b = random.nextInt(maxB);
 
@@ -30,25 +30,7 @@ public final class CalcGame implements Game {
 
         System.out.println("Question: " + a + " " + operationDesc + " " + b);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Your answer: ");
-
-        int answer;
-        try {
-            answer = sc.nextInt();
-        } catch (Exception e) {
-            return false;
-        }
-
-        if (answer == correctAnswer) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            String msg = "'" + answer + "' is wrong answer ;(. Correct answer was '"
-                    + correctAnswer + "'.";
-            System.out.println(msg);
-            return false;
-        }
+        return checkResult(correctAnswer);
     }
 
     private int getOperationNumber() {

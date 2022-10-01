@@ -18,3 +18,7 @@
 ### GCD game demo:
 
 [![asciicast](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli.svg)](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli)
+
+### Progression game demo:
+
+[![asciicast](https://asciinema.org/a/f1xsTbUQDFp5JywEJPp3F7tMB.svg)](https://asciinema.org/a/f1xsTbUQDFp5JywEJPp3F7tMB)

@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public final class EvenGame implements Game {
     private final int maxNumber = 100;
@@ -19,18 +18,6 @@ public final class EvenGame implements Game {
 
         System.out.println("Question: " + number);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Your answer: ");
-        String answer = sc.next();
-
-        if (answer.equals(correctAnswer)) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            String msg = "'" + answer + "' is wrong answer ;(. Correct answer was '"
-                    + correctAnswer + "'.";
-            System.out.println(msg);
-            return false;
-        }
+        return checkResult(correctAnswer);
     }
 }
