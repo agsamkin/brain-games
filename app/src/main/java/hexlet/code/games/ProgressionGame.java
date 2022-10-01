@@ -3,8 +3,8 @@ package hexlet.code.games;
 import java.util.Random;
 
 public final class ProgressionGame implements Game {
-    private final int minNumberOfElements = 5;
-    private final int maxNumberOfElements = 11;
+
+    private final int progressionLength = 10;
 
     private final int minDeltaValue = -3;
     private final int maxDeltaValue = 4;
@@ -21,8 +21,7 @@ public final class ProgressionGame implements Game {
     public boolean play() {
         Random random = new Random();
 
-        int numberOfElements = random.nextInt(minNumberOfElements, maxNumberOfElements);
-        int secretPosition = random.nextInt(0, numberOfElements);
+        int secretPosition = random.nextInt(0, progressionLength);
 
         int delta = random.nextInt(minDeltaValue, maxDeltaValue);
         if (delta == 0) {
@@ -32,7 +31,9 @@ public final class ProgressionGame implements Game {
         int startElement = random.nextInt(minValueStartElement, maxValueStartElement);
 
         int correctAnswer = 0;
-        for (int i = 0; i < numberOfElements; i++) {
+
+        System.out.print("Question: ");
+        for (int i = 0; i < progressionLength; i++) {
             int tmp = startElement;
             if (i == secretPosition) {
                 correctAnswer = tmp;
