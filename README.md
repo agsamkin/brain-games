@@ -8,7 +8,7 @@
 
 ### Even game demo:
 
-[![asciicast](https://asciinema.org/a/UzeAMqlmvQmmxyic9soRdSQH6.svg)](https://asciinema.org/a/UzeAMqlmvQmmxyic9soRdSQH6)
+[![asciicast](https://asciinema.org/a/pAqD1vHszx0ukBrZpuaKxhQow.svg)](https://asciinema.org/a/pAqD1vHszx0ukBrZpuaKxhQow)
 
 ### Сalc game demo:
 
