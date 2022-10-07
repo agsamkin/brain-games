@@ -2,31 +2,49 @@ package hexlet.code;
 
 import hexlet.code.games.Game;
 
+import java.util.Scanner;
+
 public final class Engine {
-    private final Game game;
-    private final int numberOfCorrectAnswersToWin = 3;
 
-    public Engine(Game newGame) {
-        this.game = newGame;
+    private static final int CORRECT_ANSWERS_TO_WIN = 3;
+
+    private Engine() {
     }
 
-    public void start() {
-        Cli.greeting();
+    public static void start(Game game) {
 
-        game.hello();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
 
-        int countOfCorrectAnswers = 0;
-        while (countOfCorrectAnswers < numberOfCorrectAnswersToWin) {
-            if (game.play()) {
-                countOfCorrectAnswers++;
+        Scanner sc = new Scanner(System.in);
+        String username = sc.next();
+
+        System.out.println("Hello, " + username + "!");
+        System.out.println(game.getRules());
+
+        int correctAnswers = 0;
+        while (correctAnswers < CORRECT_ANSWERS_TO_WIN) {
+
+            Task task = game.getTask();
+
+            System.out.println(task.question());
+            System.out.print("Your answer: ");
+            String userAnswer = sc.next();
+
+            if (userAnswer.equals(task.correctAnswer())) {
+                System.out.println("Correct!");
+                correctAnswers++;
             } else {
-                System.out.println("Let's try again, " + Cli.getUsername() + "!");
-                break;
+                String msg = "'" + userAnswer + "' is wrong answer ;(. Correct answer was '"
+                        + task.correctAnswer() + "'.";
+                System.out.println(msg);
+                System.out.println("Let's try again, " + username + "!");
+                return;
             }
+
         }
 
-        if (countOfCorrectAnswers == numberOfCorrectAnswersToWin) {
-            System.out.println("Congratulations, " + Cli.getUsername() + "!");
-        }
+        System.out.println("Congratulations, " + username + "!");
     }
+
 }
