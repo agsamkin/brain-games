@@ -5,24 +5,23 @@
 ### Codeclimate status:
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f451db6f8766d403557d/maintainability)](https://codeclimate.com/github/agsamkin/java-project-61/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/f451db6f8766d403557d/test_coverage)](https://codeclimate.com/github/agsamkin/java-project-61/test_coverage)
 
 ### Even game demo:
 
-[![asciicast](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo.svg)](https://asciinema.org/a/Yg4EzNIUxWa0lAMV9yZ4erflo)
+[![asciicast](https://asciinema.org/a/UzeAMqlmvQmmxyic9soRdSQH6.svg)](https://asciinema.org/a/UzeAMqlmvQmmxyic9soRdSQH6)
 
 ### Сalc game demo:
 
-[![asciicast](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG.svg)](https://asciinema.org/a/VmlrqVZUlDjSuAPIn0wlLoWAG)
+[![asciicast](https://asciinema.org/a/lbXA39C8cIeMlduvQgqZGdGzR.svg)](https://asciinema.org/a/lbXA39C8cIeMlduvQgqZGdGzR)
 
 ### GCD game demo:
 
-[![asciicast](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli.svg)](https://asciinema.org/a/6PqH29lYA0xkzJNQGWtkZpDli)
+[![asciicast](https://asciinema.org/a/vATF48HG9jczdPt671HaSae7S.svg)](https://asciinema.org/a/vATF48HG9jczdPt671HaSae7S)
 
 ### Progression game demo:
 
-[![asciicast](https://asciinema.org/a/f1xsTbUQDFp5JywEJPp3F7tMB.svg)](https://asciinema.org/a/f1xsTbUQDFp5JywEJPp3F7tMB)
+[![asciicast](https://asciinema.org/a/oYXy7Jm4DyfCxLDBn7ZaHsnRB.svg)](https://asciinema.org/a/oYXy7Jm4DyfCxLDBn7ZaHsnRB)
 
 ### Prime game demo:
 
-[![asciicast](https://asciinema.org/a/PjFjejYVRJkGNQAcOOEnCOG29.svg)](https://asciinema.org/a/PjFjejYVRJkGNQAcOOEnCOG29)
+[![asciicast](https://asciinema.org/a/58RGPj5RClEMUIy96hompwB1w.svg)](https://asciinema.org/a/58RGPj5RClEMUIy96hompwB1w)
