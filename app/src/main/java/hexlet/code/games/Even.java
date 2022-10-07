@@ -10,7 +10,7 @@ public final class Even implements Game {
 
     @Override
     public String getRules() {
-        return "Answer 'yes' if the number is even, otherwise answer 'no'";
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
     @Override
