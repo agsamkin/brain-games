@@ -8,9 +8,6 @@ public final class Engine {
 
     private static final int CORRECT_ANSWERS_TO_WIN = 3;
 
-    private Engine() {
-    }
-
     public static void start(Game game) {
 
         System.out.println("Welcome to the Brain Games!");
@@ -27,7 +24,7 @@ public final class Engine {
 
             Task task = game.getTask();
 
-            System.out.println(task.question());
+            System.out.println("Question: " + task.question());
             System.out.print("Your answer: ");
             String userAnswer = sc.next();
 

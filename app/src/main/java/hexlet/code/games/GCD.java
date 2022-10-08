@@ -20,7 +20,7 @@ public final class GCD implements Game {
         int a = random.nextInt(MAX_A);
         int b = random.nextInt(MAX_B);
 
-        String question = "Question: " + a + " " + b;
+        String question = a + " " + b;
         int correctAnswer = gcd(a, b);
 
         return new Task(question, String.valueOf(correctAnswer));

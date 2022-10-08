@@ -18,9 +18,14 @@ public final class Even implements Game {
         Random random = new Random();
         int number = random.nextInt(MAX_NUMBER);
 
-        String question = "Question: " + number;
-        String correctAnswer = number % 2 == 0 ? "yes" : "no";
+        String question = String.valueOf(number);
+        String correctAnswer = isEven(number) ? "yes" : "no";
 
         return new Task(question, correctAnswer);
     }
+
+    private boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
 }

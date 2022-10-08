@@ -30,7 +30,7 @@ public final class Calc implements Game {
         String symbol = operation.symbol;
         BiFunction<Integer, Integer, Integer> function = operation.function;
 
-        String question = "Question: " + a + " " + symbol + " " + b;
+        String question = a + " " + symbol + " " + b;
         int correctAnswer = function.apply(a, b);
 
         return new Task(question, String.valueOf(correctAnswer));

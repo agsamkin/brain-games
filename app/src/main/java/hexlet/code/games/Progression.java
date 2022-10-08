@@ -32,18 +32,18 @@ public final class Progression implements Game {
 
         int correctAnswer = 0;
 
-        String question = "Question: ";
+        StringBuilder question = new StringBuilder();
         for (int i = 0; i < PROGRESSION_LENGTH; i++) {
             if (i == secretPosition) {
                 correctAnswer = startElement;
-                question += ".. ";
+                question.append(".. ");
             } else {
-                question += startElement + " ";
+                question.append(startElement).append(" ");
             }
             startElement += delta;
         }
 
-        return new Task(question, String.valueOf(correctAnswer));
+        return new Task(question.toString(), String.valueOf(correctAnswer));
     }
 
 }

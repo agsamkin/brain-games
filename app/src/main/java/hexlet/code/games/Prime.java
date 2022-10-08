@@ -17,7 +17,7 @@ public final class Prime implements Game {
         Random random = new Random();
         int number = random.nextInt(MAX_NUMBER);
 
-        String question = "Question: " + number;
+        String question = String.valueOf(number);
         String correctAnswer = isPrime(number) ? "yes" : "no";
 
         return new Task(question, correctAnswer);

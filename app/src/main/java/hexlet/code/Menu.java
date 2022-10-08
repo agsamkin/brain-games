@@ -14,9 +14,6 @@ import java.util.function.Supplier;
 
 public final class Menu {
 
-    private Menu() {
-    }
-
     public static void show() {
 
         System.out.println("Please enter the game number and press Enter.");
@@ -39,12 +36,15 @@ public final class Menu {
     }
 
     private static int selectMenuItem() {
-        int menuItem = 0;
         Scanner sc = new Scanner(System.in);
+        int menuItem;
         try {
             menuItem = sc.nextInt();
-        } catch (RuntimeException e) {
+        } catch (Exception e) {
             throw new RuntimeException("Incorrect value, try again");
+        }
+        if (Arrays.stream(MenuItem.values()).noneMatch(mi -> mi.item == menuItem)) {
+            throw new UnsupportedOperationException(menuItem + " is an unsupported menu number");
         }
         return menuItem;
     }
