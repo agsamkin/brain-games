@@ -1,4 +1,4 @@
-## Brain game
+## Brain games
 
 ### Codeclimate status:
 
